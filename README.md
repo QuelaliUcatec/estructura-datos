@@ -17,7 +17,7 @@ graph LR
     D[Dato] --> P[Puntero Siguiente]
     end
     P --> N2[Siguiente Nodo...]
-    N2 --> NULL[/NULL/]
+    N2 --> NULL[/NULL/]​```
 
 ​```c
 struct Nodo {
