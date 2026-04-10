@@ -10,12 +10,14 @@ Una **Lista Enlazada Simple** es una estructura de datos lineal donde los elemen
 Son esenciales en sistemas donde el volumen de datos varía constantemente. Permiten insertar y eliminar elementos de forma eficiente sin necesidad de mover el resto de los datos en memoria.
 
 ## 📊 Representación Visual del Nodo
-```
-mermaid
+```mermaid
 graph LR
     subgraph Nodo
     D[Dato] --> P[Puntero Siguiente]
     end
     P --> N2[Siguiente Nodo...]
     N2 --> NULL[/NULL/]
-    ```
+    struct Nodo {
+    int dato;
+    struct Nodo* siguiente;
+};
