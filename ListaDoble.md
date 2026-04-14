@@ -12,7 +12,7 @@ Una lista doblemente enlazada es una estructura donde cada elemento (nodo) está
 Cada elemento (Nodo) conoce tanto su origen como su destino, la estructura se visualiza asi:
 
        [CABEZA]                                                 [COLA]
-       -----------------      +---------------+      -----------------
+       +---------------+      +---------------+      +---------------+
 NULL <-| Anterior: NULL|<-----| Anterior: <---|<-----| Anterior: <---|
        | Dato:MESSI    |      | Dato:MIGUELITO|      | Dato:CRISTIANO|
        | Siguiente: -> |----->| Siguiente: -> |----->| Sig: NULL     |
