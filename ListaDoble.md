@@ -1,6 +1,6 @@
 # Estructura de Datos: Listas Enlazadas Dobles
 
-* **Nombre:** Moisés Gabriel Malpartida Zabaleta
+* **Nombre:** Moises Gabriel Malpartida Zabaleta
 * **Rama:** GaboMz/practica01/002-lista-doble
 
 ### LISTAS ENLAZADAS DOBLES
