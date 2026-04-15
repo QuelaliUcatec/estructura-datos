@@ -45,10 +45,10 @@ Bash
 
 dotnet build
 
-$$ Esto generará los archivos binarios dentro de la carpeta ./bin/Debug/netX.X/.
-$$ 4. Ejecución
+##Esto generará los archivos binarios dentro de la carpeta ./bin/Debug/netX.X/.
+##4. Ejecución
 
-$$ Para compilar (si hubo cambios) y ejecutar el programa de prueba inmediatamente:
+##Para compilar (si hubo cambios) y ejecutar el programa de prueba inmediatamente:
 Bash
 
 dotnet run
@@ -56,8 +56,8 @@ dotnet run
 
 ---
 
-$$ 📊 Representación Conceptual
-Debido a que cada nodo solo conoce la ubicación del siguiente, la estructura se visualiza de la siguiente manera:
+##📊 Representación Conceptual
+##Debido a que cada nodo solo conoce la ubicación del siguiente, la estructura se visualiza de la siguiente manera:
 
 ```text
 [ CABEZA ]
