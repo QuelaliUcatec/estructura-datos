@@ -28,36 +28,37 @@ Para trabajar con este proyecto en sistemas Linux (Arch/Garuda) o Windows con el
 
 ### 1. Preparación del Entorno
 Asegúrese de estar en la raíz de la carpeta `002-lista-simple`. Si el archivo de proyecto `.csproj` no existe, puede generarlo con:
-```bash
+## bash
+----------------------------------------------------------------------
 dotnet new console --force
+----------------------------------------------------------------------
+2. Restauración de Dependencias
 
-$$ 2. Restauración de Dependencias
-
-$$ Antes de compilar, es una buena práctica asegurar que todas las librerías necesarias estén listas:
-Bash
-
+Antes de compilar, es una buena práctica asegurar que todas las librerías necesarias estén listas:
+## Bash
+----------------------------------------------------------------------
 dotnet restore
+----------------------------------------------------------------------
+3. Compilación (Build)
 
-$$ 3. Compilación (Build)
-
-$$ Para compilar el código y verificar que no existan errores de sintaxis o de referencia:
-Bash
-
+Para compilar el código y verificar que no existan errores de sintaxis o de referencia:
+## Bash
+-----------------------------------------------------------------------
 dotnet build
+-----------------------------------------------------------------------
+Esto generará los archivos binarios dentro de la carpeta ./bin/Debug/netX.X/.
+4. Ejecución
 
-##Esto generará los archivos binarios dentro de la carpeta ./bin/Debug/netX.X/.
-##4. Ejecución
-
-##Para compilar (si hubo cambios) y ejecutar el programa de prueba inmediatamente:
-Bash
-
+Para compilar (si hubo cambios) y ejecutar el programa de prueba inmediatamente:
+## Bash
+-------------------------------------------------------------------------
 dotnet run
-
+-------------------------------------------------------------------------
 
 ---
 
-##📊 Representación Conceptual
-##Debido a que cada nodo solo conoce la ubicación del siguiente, la estructura se visualiza de la siguiente manera:
+## 📊 Representación Conceptual
+Debido a que cada nodo solo conoce la ubicación del siguiente, la estructura se visualiza de la siguiente manera:
 
 ```text
 [ CABEZA ]
