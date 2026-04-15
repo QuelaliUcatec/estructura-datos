@@ -1,4 +1,4 @@
-# 🎵 Reproductor de Música — Lista Circular Doble en Java
+# Reproductor de Música — Lista Circular Doble en Java
 
 Proyecto educativo que implementa un **reproductor de música** usando una **lista circular doblemente enlazada** como estructura de datos subyacente.
 
@@ -112,25 +112,11 @@ javac -version
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/reproductor-musica.git
+https://github.com/QuelaliUcatec/estructura-datos.git
 cd reproductor-musica
 ```
 
-### 2. Crear la estructura de carpetas (si es manual)
-
-```bash
-mkdir -p src/reproductor
-```
-
-Copiar los tres archivos `.java` dentro de `src/reproductor/`.
-
-Asegurarse de que cada archivo tenga la declaración de paquete al inicio:
-
-```java
-package reproductor;
-```
-
-### 3. Compilar
+### 2. Compilar
 
 Desde la raíz del proyecto:
 
@@ -140,7 +126,7 @@ javac -d out src/reproductor/*.java
 
 Esto genera los `.class` compilados dentro de la carpeta `out/`.
 
-### 4. Ejecutar
+### 3. Ejecutar
 
 ```bash
 java -cp out reproductor.Reproductor
@@ -237,9 +223,3 @@ Clase principal (`main`). Crea una lista, carga canciones de ejemplo y demuestra
 - **Turnos en videojuegos** — cada jugador cede el turno al siguiente en ciclo
 - **Buffers circulares** — almacenamiento temporal de datos en streaming de audio/video
 - **Historial de navegación** — avanzar y retroceder entre páginas visitadas
-
----
-
-## Licencia
-
-MIT — libre para usar, modificar y distribuir con fines educativos.
