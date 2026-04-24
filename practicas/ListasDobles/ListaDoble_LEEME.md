@@ -23,7 +23,7 @@ MIGUELITO está en medio y conecta con ambos lados.
 
 ### EJECUCION 
 
-* Para ejecutar el codigo abre la carpeta ´ListasDobles´ y el archivo .sln ó  sigue los siguientes pasos: 
+* Para ejecutar sigue los siguientes pasos: 
 Abre tu terminal (PowerShell).
 
 * 1. Crea un proyecto de consola vacío escribiendo este comando y presionando Enter:
