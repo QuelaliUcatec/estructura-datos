@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ListasDobles": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
