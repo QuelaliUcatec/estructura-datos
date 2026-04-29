@@ -56,6 +56,37 @@ dotnet run
 -------------------------------------------------------------------------
 
 ---
+## 💻 Explicación del Funcionamiento (Lógica del Código)
+
+El funcionamiento del sistema se divide en la gestión de memoria y el recorrido de punteros:
+1. Definición de la Unidad (El Nodo)
+
+Cada elemento de la lista es una instancia de Nodo.cs. Técnicamente, no es solo un contenedor de datos, sino un objeto que guarda una referencia de memoria.
+
+    Dato: El valor útil (ej. un int).
+
+    Siguiente: Una variable de tipo Nodo que almacena la dirección del próximo elemento.
+
+2. Gestión de la Lista (ListaSimple.cs)
+
+La lista funciona mediante un "ancla" llamada cabeza. La lógica principal de los métodos es:
+
+    Inserción: * Si la cabeza es nula, el nuevo nodo se asigna directamente allí.
+
+        Si ya hay datos, el programa realiza un recorrido lineal. Se crea un nodo temporal (puntero) que empieza en la cabeza y salta de uno en uno (actual = actual.Siguiente) hasta que encuentra un nodo cuyo Siguiente sea null. Ahí es donde se "enlaza" el nuevo nodo.
+
+    Recorrido/Lectura: * Es un proceso de O(n). El código inicia en la cabeza y utiliza un ciclo while que continúa mientras el nodo actual no sea nulo. En cada paso, extrae el valor del dato y se mueve a la siguiente posición de memoria.
+
+3. Ejecución (Program.cs)
+
+En el punto de entrada, se orquesta el ciclo de vida:
+
+    Se instancia ListaSimple.
+
+    Se puebla la memoria dinámica mediante llamadas sucesivas a Insertar().
+
+    Se invoca el método de impresión para verificar que los enlaces se realizaron correctamente en la memoria RAM.
+
 
 ## 📊 Representación Conceptual
 Debido a que cada nodo solo conoce la ubicación del siguiente, la estructura se visualiza de la siguiente manera:
