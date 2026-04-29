@@ -24,3 +24,38 @@ flowchart TD
     style A fill:#e3f2fd
     style I fill:#e8f5e9
 ```
+
+2. Representación visual de la lista antes y después
+
+```mermaid
+flowchart LR
+    subgraph Antes
+        direction LR
+        N1["Nodo 1<br>(data=10)"] --> N2["Nodo 2<br>(data=20)"] --> N3["Nodo 3<br>(data=30)"] --> NULL1["null"]
+    end
+
+    Ins["Insertar 40 al final"] 
+
+    subgraph Después
+        direction LR
+        M1["Nodo 1<br>(data=10)"] --> M2["Nodo 2<br>(data=20)"] --> M3["Nodo 3<br>(data=30)"] --> M4["Nodo 4<br>(data=40)"] --> NULL2["null"]
+    end
+
+    NULL1 -.->|antes| Ins
+    Ins -.->|después| NULL2
+```
+
+3. Versión más detallada con nodos individuales (estilo clásico)
+
+```mermaid
+flowchart LR
+    Head["head"] --> Node1["10 | next"] 
+    Node1 --> Node2["20 | next"]
+    Node2 --> Node3["30 | next"]
+    Node3 --> Null["null"]
+
+    New["Nuevo nodo: 40 | null"]
+
+    style Head fill:#fff3e0
+    style New fill:#e8f5e9, stroke:#2e7d32
+```
