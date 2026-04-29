@@ -1,5 +1,5 @@
 using System;
-using EstructuraDatos.Listas; // Esto conecta con tu clase de arriba
+using EstructuraDatos.Listas; 
 
 class Program
 {
