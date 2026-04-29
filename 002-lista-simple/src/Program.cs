@@ -9,7 +9,7 @@ class Program
         
         Console.WriteLine("=== SISTEMA DE GESTIÓN DE LISTA SIMPLE ===");
 
-        // Aquí sale de dónde sale el parámetro
+        // Aquí es de dónde sale el parámetro
         Console.Write("Por favor, ingresa un número para el primer nodo: ");
         string entrada = Console.ReadLine();
         int numeroIngresado = int.Parse(entrada);
