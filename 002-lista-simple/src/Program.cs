@@ -1,27 +1,29 @@
 using System;
-using EstructuraDatos.Listas; 
+using EstructuraDatos.Listas;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // 1. Creamos la lista en memoria
         ListaSimple miLista = new ListaSimple();
-
-        Console.WriteLine("=== PRUEBA DE ESTRUCTURA DE DATOS: LISTA SIMPLE ===");
         
-        // 2. Insertamos datos para demostrar que funciona
-        Console.WriteLine("Insertando valores: 10, 20, 30...");
-        miLista.Insertar(10);
-        miLista.Insertar(20);
-        miLista.Insertar(30);
+        Console.WriteLine("=== SISTEMA DE GESTIÓN DE LISTA SIMPLE ===");
 
-        // 3. Mostramos la lista en consola
-        Console.WriteLine("\nResultado de la lista enlazada:");
+        // Aquí sale de dónde sale el parámetro
+        Console.Write("Por favor, ingresa un número para el primer nodo: ");
+        string entrada = Console.ReadLine();
+        int numeroIngresado = int.Parse(entrada);
+
+        // AQUÍ SE ENVÍA EL PARÁMETRO
+        miLista.Insertar(numeroIngresado);
+
+        Console.Write("Ingresa otro número para el segundo nodo: ");
+        miLista.Insertar(int.Parse(Console.ReadLine())); // Versión corta
+
+        Console.WriteLine("\n--- Estado actual de la memoria ---");
         miLista.Mostrar();
 
-        Console.WriteLine("\n================================================");
-        Console.WriteLine("Presiona cualquier tecla para finalizar la prueba.");
+        Console.WriteLine("\nPresiona cualquier tecla para salir...");
         Console.ReadKey();
     }
 }
