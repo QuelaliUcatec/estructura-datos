@@ -4,59 +4,60 @@ namespace EstructuraDatos.Listas
 {
     public class ListaSimple
     {
-        // 'cabeza' (head) es el ancla. Si perdemos esta referencia, perdemos toda la lista.
+        // El ancla principal de la lista. Privado para mantener el encapsulamiento.
         private Nodo cabeza;
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase ListaSimple, empezando vacía.
+        /// </summary>
         public ListaSimple()
         {
-            this.cabeza = null; // Inicialmente, la lista no existe en memoria (está vacía)
+            this.cabeza = null;
         }
 
         /// <summary>
-        /// Agrega un nuevo elemento al final de la estructura.
-        /// Complejidad temporal: O(n) - debe recorrer toda la lista.
+        /// Inserta un nuevo nodo al final de la estructura enlazada.
+        /// Complejidad temporal: O(n) - requiere recorrer la lista hasta el último elemento.
         /// </summary>
+        /// <param name="valor">El dato de tipo entero que se encapsulará en el nuevo nodo.</param>
         public void Insertar(int valor)
         {
-            Nodo nuevoNodo = new Nodo(valor); // 1. Creamos el nuevo objeto en el Heap
+            Nodo nuevoNodo = new Nodo(valor);
 
-            // Caso A: Si la lista está vacía, el nuevo nodo se convierte en la cabeza
+            // Caso A: La lista está vacía. El nuevo nodo es la cabeza.
             if (cabeza == null)
             {
                 cabeza = nuevoNodo;
+                return; // Salimos prematuramente para mantener el código limpio sin usar 'else'
             }
-            else
+
+            // Caso B: Recorrer hasta el final usando un puntero auxiliar.
+            Nodo actual = cabeza;
+            while (actual.Siguiente != null)
             {
-                // Caso B: Recorrer hasta el final
-                Nodo actual = cabeza; // Usamos un 'puntero auxiliar' para no perder la cabeza
-                
-                // Mientras el nodo actual tenga a alguien después de él...
-                while (actual.Siguiente != null)
-                {
-                    actual = actual.Siguiente; // Saltamos al siguiente eslabón
-                }
-                
-                // Una vez que llegamos al último (donde Siguiente era null), conectamos
-                actual.Siguiente = nuevoNodo;
+                actual = actual.Siguiente;
             }
+            
+            // Enlazamos el último nodo con el recién creado.
+            actual.Siguiente = nuevoNodo;
         }
 
         /// <summary>
-        /// Imprime los elementos de forma secuencial.
+        /// Recorre secuencialmente la lista e imprime sus valores en la consola.
         /// </summary>
         public void Mostrar()
         {
             if (cabeza == null)
             {
-                Console.WriteLine("Lista vacía.");
+                Console.WriteLine("La lista está vacía.");
                 return;
             }
 
-            Nodo temp = cabeza; // Iniciamos en el origen
-            while (temp != null) // Mientras el nodo actual exista
+            Nodo actual = cabeza;
+            while (actual != null)
             {
-                Console.Write($"[{temp.Dato}] -> ");
-                temp = temp.Siguiente; // Desplazamiento lógico
+                Console.Write($"[{actual.Dato}] -> ");
+                actual = actual.Siguiente;
             }
             Console.WriteLine("NULL");
         }
