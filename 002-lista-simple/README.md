@@ -116,4 +116,4 @@ flowchart LR
 
     class Head head
     class Node1,Node2,Node3 node
-    class Null nullNode
+    class Null nullNode```
