@@ -99,3 +99,27 @@ Debido a que cada nodo solo conoce la ubicación del siguiente, la estructura se
   | Dato: 10  |      | Dato: 20  |      | Dato: 30  |
   | Sig: ---->|----->| Sig: ---->|----->| Sig: NULL |
   +-----------+      +-----------+      +-----------+
+```
+```
+flowchart LR
+    subgraph "Lista Enlazada Simple - Memoria Dinámica"
+        Head["Cabeza<br/>(Referencia al primer nodo)"] 
+        --> Node1["Nodo 1<br/>Dato = 10<br/>Siguiente = Dirección Nodo 2"]
+        Node1 --> Node2["Nodo 2<br/>Dato = 20<br/>Siguiente = Dirección Nodo 3"]
+        Node2 --> Node3["Nodo 3<br/>Dato = 30<br/>Siguiente = null"]
+        Node3 --> Null["null"]
+    end
+
+    %% Estilos
+    classDef head fill:#1e40af, stroke:#93c5fd, color:white, stroke-width:3px;
+    classDef node fill:#14532d, stroke:#4ade80, color:white, stroke-width:2px;
+    classDef nullNode fill:#7f1d1d, stroke:#f87171, color:white;
+
+    class Head head
+    class Node1,Node2,Node3 node
+    class Null nullNode
+
+    %% Notas
+    note1["Ventaja: No necesita memoria contigua"] 
+    note2["Inserción/Eliminación O(1) si se tiene el puntero"]
+```
