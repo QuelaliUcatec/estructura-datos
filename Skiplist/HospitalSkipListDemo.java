@@ -1,3 +1,4 @@
+package Skiplist;
 /**
  * Demostración de SkipList aplicada a sistema de hospital
  * Muestra diferentes casos de uso: búsqueda, inserción, eliminación

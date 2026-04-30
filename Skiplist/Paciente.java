@@ -1,3 +1,4 @@
+package Skiplist;
 /**
  * Clase Paciente para el sistema de hospital
  * Implementa Comparable para ser usada en SkipList
